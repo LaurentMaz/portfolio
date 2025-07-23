@@ -17,6 +17,8 @@
   --color-darkTheme: var(--darkTheme);
   --font-ovo: "Ovo", sans-serif;
   --font-outfit: "Outfit", sans-serif;
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 4px 4px 0 #fff;
 }
 
 @media (prefers-color-scheme: dark) {
