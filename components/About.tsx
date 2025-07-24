@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import { assets, infoList, toolsData } from "@/assets/assets";
+import { ThemeProps } from "@/types/ThemeTypes";
 
-const About = () => {
+const About = ({ isDarkMode, setIsDarkMode }: ThemeProps) => {
   return (
     <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
       <h4 className="text-center mb-2 text-lg font-ovo">Présentation</h4>

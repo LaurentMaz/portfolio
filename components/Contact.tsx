@@ -1,7 +1,8 @@
 import Image from "next/image";
 import ContactForm from "./ContactForm";
+import { ThemeProps } from "@/types/ThemeTypes";
 
-const Contact = () => {
+const Contact = ({ isDarkMode, setIsDarkMode }: ThemeProps) => {
   return (
     <div
       id="contact"
@@ -9,7 +10,7 @@ const Contact = () => {
     >
       <h4 className="text-center mb-2 text-lg font-ovo">Contact</h4>
       <h2 className="text-center text-5xl font-ovo mb-10">
-        Echangeons ensemble
+        Echangons ensemble
       </h2>
       <p className="text-center max-w-2xl mx-auto mb-12 font-ovo">
         N'hésitez pas à me contacter ! Pour toute question ou commentaire,
