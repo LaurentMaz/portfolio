@@ -16,6 +16,8 @@ import wordpress from './wordpress.svg';
 import typescript from './typescript.svg';
 import next from './next.svg';
 import react from './react.svg';
+import performances_icon from './performances.svg';
+import securite_icon from './securite.svg';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
@@ -79,7 +81,9 @@ export const assets = {
     wordpress,
     typescript,
     next,
-    react
+    react,
+    performances_icon,
+    securite_icon
 };
 
 export const workData = [
@@ -106,10 +110,10 @@ export const workData = [
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    { icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
+    { icon: assets.web_icon, title: 'Conception et développement web', description: 'Création de site sur mesure (plugins, thèmes, blocs)...', link: '' },
+    { icon: assets.performances_icon, title: 'Optimisation des performances', description: 'Cores web vitals, SEO, temps de chargement, caching...', link: '' },
+    { icon: assets.ui_icon, title: 'UI/UX design', description: 'Sensibilité UI/UX, figma, canva, photoshop...', link: '' },
+    { icon: assets.securite_icon, title: 'Sécurité et maintenance', description: 'Monitoring, firewall plugin, limit login, bonne pratique de code, plan de mise à jour et backup policy…...', link: '' },
 ]
 
 export const infoList = [
