@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
   const sideMenuRef = useRef<HTMLUListElement>(null);
+  const [isScroll, setIsScroll] = useState(false);
+
   const openMenu = () => {
     if (sideMenuRef.current) {
       sideMenuRef.current.style.transform = "translateX(-16rem)";
@@ -15,12 +17,33 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Nettoyage pour éviter les fuites mémoire
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
-      <nav className="flex items-center justify-between w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 z-50">
+      <nav
+        className={`flex items-center justify-between w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 z-50 ${
+          isScroll && "bg-white/50 backdrop-blur-lg shadow-sm"
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -28,7 +51,11 @@ const Navbar = () => {
             alt="Laurent MAZOYER logo"
           />
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-2xl px-12 py-3 bg-white/50 shadow-sm">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-2xl px-12 py-3  ${
+            !isScroll && "bg-white/50 shadow-sm"
+          }`}
+        >
           <li>
             <a href="#top" className="font-ovo">
               Accueil

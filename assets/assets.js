@@ -6,13 +6,16 @@ import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
-import firebase from './firebase.png';
 import figma from './figma.png';
 import git from './git.png';
-import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.svg';
 import logo_dark from './logo_dark.svg';
+import php from './php.svg';
+import wordpress from './wordpress.svg';
+import typescript from './typescript.svg';
+import next from './next.svg';
+import react from './react.svg';
 import mail_icon from './mail_icon.png';
 import mail_icon_dark from './mail_icon_dark.png';
 import profile_img from './profile-img.png';
@@ -44,11 +47,9 @@ export const assets = {
     edu_icon_dark,
     project_icon,
     project_icon_dark,
-    vscode,
-    firebase,
+    vscode,    
     figma,
-    git,
-    mongodb,
+    git,    
     right_arrow_white,
     logo,
     logo_dark,
@@ -73,7 +74,12 @@ export const assets = {
     right_arrow,
     send_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    php,
+    wordpress,
+    typescript,
+    next,
+    react
 };
 
 export const workData = [
@@ -107,11 +113,11 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'HTML, CSS, JavaScript React Js, Next Js' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Computer Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Technos', description: 'PHP, Wordpress, Typescript, ReactJs, NextJs, Tailwind, MySQL,Git-GitHub' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Formation', description: 'Bac+3 Concepteur développeur fullstack IPI Lyon' },
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projets', description: 'Site web complexe, e-commerce, app mobile,...' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.figma, assets.git, assets.php, assets.wordpress, assets.typescript, assets.next, assets.react
 ];
