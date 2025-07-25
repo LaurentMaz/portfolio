@@ -2,11 +2,11 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import { ThemeProps } from "@/types/ThemeTypes";
 
-const Contact = ({ isDarkMode, setIsDarkMode }: ThemeProps) => {
+const Contact = ({ isDarkMode }: ThemeProps) => {
   return (
     <div
       id="contact"
-      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+      className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none"
     >
       <h4 className="text-center mb-2 text-lg font-ovo">Contact</h4>
       <h2 className="text-center text-5xl font-ovo mb-10">

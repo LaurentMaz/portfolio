@@ -43,14 +43,14 @@ const ContactForm = () => {
           type="text"
           placeholder="Entrez votre nom"
           required
-          className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
           name="name"
         />
         <input
           type="text"
           placeholder="Entrez votre email"
           required
-          className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+          className="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
           name="email"
         />
       </div>
@@ -58,13 +58,13 @@ const ContactForm = () => {
         rows={6}
         placeholder="Entrez votre message"
         required
-        className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+        className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
         name="message"
       ></textarea>
       <button
         disabled={loading}
         type="submit"
-        className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer"
+        className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
       >
         {!loading ? (
           <>
@@ -84,10 +84,12 @@ const ContactForm = () => {
           />
         )}
       </button>
-      <p className="mt-4 text-center flex items-center justify-center gap-2">
-        {result}
-        <Image src={assets.send_icon} alt="send icon" className="w-5" />
-      </p>
+      {result && (
+        <p className="mt-4 text-center flex items-center justify-center gap-2">
+          {result}
+          <Image src={assets.send_icon} alt="send icon" className="w-5" />
+        </p>
+      )}
     </form>
   );
 };

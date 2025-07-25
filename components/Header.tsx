@@ -2,7 +2,7 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
 
-const Header = ({ setIsDarkMode, darkmode }: ThemeProps) => {
+const Header = ({ isDarkMode }: ThemeProps) => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div>
@@ -26,7 +26,7 @@ const Header = ({ setIsDarkMode, darkmode }: ThemeProps) => {
       <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
         <a
           href="#contact"
-          className="px-10 py-3 border rounded-full border-white bg-black text-white flex items-center gap-2"
+          className="px-10 py-3 border rounded-full border-white bg-black text-white flex items-center gap-2 dark:bg-transparent"
         >
           Me contacter
           <Image
@@ -38,7 +38,7 @@ const Header = ({ setIsDarkMode, darkmode }: ThemeProps) => {
         <a
           href="/sample-resume.pdf"
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2"
+          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
         >
           Mon CV
           <Image
