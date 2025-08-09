@@ -40,6 +40,9 @@ import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import pc_icon from "./pc-icon.png"
+import calendar_icon from "./calendar-icon.png"
+import build_icon from "./build-icon.png"
 
 export const assets = {
     user_image,
@@ -83,7 +86,10 @@ export const assets = {
     next,
     react,
     performances_icon,
-    securite_icon
+    securite_icon,
+    pc_icon,
+    build_icon,
+    calendar_icon
 };
 
 export const workData = [
@@ -91,26 +97,30 @@ export const workData = [
         title: 'Recherche multicritères',
         description: 'Application Wordpress',
         bgImage: '/work-1.png',
+        link: "/realisations/recherche-multicriteres"
     },
     {
         title: 'Site e-commerce',
         description: 'Site Woocommerce',
         bgImage: '/work-2.png',
+        link:""
     },
     {
         title: 'Site vitrine',
         description: 'Site Wordpress',
         bgImage: '/work-3.png',
+        link:""
     },
     {
         title: 'Application santé mentale',
         description: 'App mobile',
         bgImage: '/work-4.png',
+        link:""
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Conception et développement web', description: 'Création de site sur mesure (plugins, thèmes, blocs)...', link: '' },
+    { icon: assets.web_icon, title: 'Conception et développement web', description: 'Création de site sur mesure (plugins, thèmes, blocs), API REST, FSE,...', link: '' },
     { icon: assets.performances_icon, title: 'Optimisation des performances', description: 'Cores web vitals, SEO, temps de chargement, caching...', link: '' },
     { icon: assets.ui_icon, title: 'UI/UX design', description: 'Sensibilité UI/UX, figma, canva, photoshop...', link: '' },
     { icon: assets.securite_icon, title: 'Sécurité et maintenance', description: 'Monitoring, firewall plugin, limit login, bonne pratique de code, plan de mise à jour et backup policy…...', link: '' },

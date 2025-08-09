@@ -2,6 +2,8 @@ import { assets, workData } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { a } from "motion/react-client";
+import Link from "next/link";
 
 const Work = ({ isDarkMode }: ThemeProps) => {
   return (
@@ -33,24 +35,29 @@ const Work = ({ isDarkMode }: ThemeProps) => {
         développement Wordpress fullstack et front-end React.
       </p>
       <div className="grid grid-cols-[grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black">
-        {workData.map(({ title, description, bgImage }, index) => (
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            key={index}
-            style={{ backgroundImage: `url(${bgImage})` }}
-            className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
-          >
-            <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-              <div>
-                <h2 className="font-semibold">{title}</h2>
-                <p className="text-sm text-gray-700">{description}</p>
+        {workData.map(({ title, description, bgImage, link }, index) => (
+          <Link key={index} href={link}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+              style={{ backgroundImage: `url(${bgImage})` }}
+              className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+            >
+              <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                <div>
+                  <h2 className="font-semibold">{title}</h2>
+                  <p className="text-sm text-gray-700">{description}</p>
+                </div>
+                <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                  <Image
+                    src={assets.send_icon}
+                    alt="send icon"
+                    className="w-5"
+                  />
+                </div>
               </div>
-              <div className="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                <Image src={assets.send_icon} alt="send icon" className="w-5" />
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </Link>
         ))}
       </div>
       <a

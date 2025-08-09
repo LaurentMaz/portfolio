@@ -74,7 +74,7 @@ const About = ({ isDarkMode }: ThemeProps) => {
               <motion.li
                 whileHover={{ scale: 1.05 }}
                 key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
               >
                 <Image
                   src={isDarkMode ? iconDark : icon}
@@ -108,7 +108,7 @@ const About = ({ isDarkMode }: ThemeProps) => {
               <motion.li
                 whileHover={{ scale: 1.1 }}
                 key={index}
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-300 rounded-lg hover:-translate-y-1 duration-500"
               >
                 <Image src={tool} alt="outil" className="w-5 sm:w-7" />
               </motion.li>
