@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const RechercheMulticriteres = () => {
+const SiteEcommerce = () => {
   return (
     <>
       <div className="m-auto">
@@ -19,37 +19,37 @@ const RechercheMulticriteres = () => {
           <div className="flex flex-col gap-4 mb-5 lg:flex-row">
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.calendar_icon} alt="" className="w-6 h-6" />
-              2024
+              2020
             </div>
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.pc_icon} alt="" className="w-6 h-6" />
-              Application web
+              Site e-commerce
             </div>
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.build_icon} alt="" className="w-6 h-6" />
-              Création d'une app web Wordpress/React
+              Création d'un site e-commerce
             </div>
           </div>
           <h1 className="text-3xl lg:text-5xl text-center font-bold">
-            Recherche multicritères, application custom au sein de Wordpress
+            Woocommerce, site e-commerce complet de vente de compléments
+            alimentaires
           </h1>
           <p className="text-lg my-5 text-center">
-            Un système de recherche entre pour trouver facilement les différents
-            logements proposés par l'entreprise selon de nombreux critères
+            Un site de vente en ligne complet pour vendre les compléments
+            alimentaires vendus par l'entreprise
           </p>
-          <a
-            target="_blank"
+          {/* <a
             href="https://jeune-bienetre.fr/nos-centres-de-jeune/"
             className="bg-[#EC1552] px-5 py-3 rounded-2xl text-white font-bold"
           >
-            Découvrir l'application
-          </a>
+            Découvrir le site
+          </a> */}
         </div>
 
         <div className="flex flex-col lg:flex-row items-start justify-between w-[70%] m-auto mt-20 pb-20 gap-10 xl:gap-0">
           <div className="flex flex-1/2">
             <Image
-              src={"/work-1.png"}
+              src={"/work-2.png"}
               alt=""
               width="500"
               height="500"
@@ -58,27 +58,29 @@ const RechercheMulticriteres = () => {
           </div>
           <div className="flex flex-col flex-1/2 gap-5">
             <p className="text-lg">
-              Jeûne & Bien-être est une entreprise française proposant de
-              nombreux lieux/centres avec des programmes d'accompagnement au{" "}
-              <b>jeûne</b> et à la <b>détox</b>.
+              Sywell Laboratoire était un partenaire de Jeûne & Bien-être qui
+              proposait à la vente ses <b>compléments alimentaires</b> pour
+              accompagner les clients vers le <b>bien-être</b> et la{" "}
+              <b>détox</b>
             </p>
             <p className="text-lg">
-              Avec de nombreux clients et années d'expérience le réseau s'est
-              aggrandit accueillant ainsi plusieurs dizaines de centres à
-              travers la France. La recherche du lieu idéal pour le client était
-              donc devenu <b>un enjeux majeur pour l'entreprise</b>.
+              Le projet à vu le jour suite au développement de Jeûne & Bien-être
+              qui proposait déjà un produit pour accompagner les cures de jeûne.
+              L'entreprise à voulu rendre plus professionnel et accessible ses
+              produits tout en élargissant sa gamme et en la proposant au client
+              à travers un vrai site de vente en ligne complet.
             </p>
             <h2 className="text-lg font-bold">Les objectifs :</h2>
             <ul className="flex flex-col gap-3">
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Faciliter la recherche pour le client
+                Créer un site e-commerce complet
               </li>
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Améliorer l'UX et l'UI
+                Faciliter l'accès aux produits et optimiser les ventes
               </li>
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Créer un système performant, rapide avec de nombreuses
-                contraintes
+                Gérer les produits et leurs contraintes (livraison, paiement, n°
+                lot, stocks,...)
               </li>
             </ul>
           </div>
@@ -92,8 +94,9 @@ const RechercheMulticriteres = () => {
             </div>
             <div className="flex gap-5 justify-center items-center pt-10">
               <p className="text-lg">
-                CPT, Custom queries, utilisation de l'API et de custom endpoint,
-                javascript, ACF, API Google Map
+                Création et gestion globale d'un site marchand (Woocommerce,
+                hooks, PHP custom, page produit, gestion de stock avec n°lot et
+                DLUO...)
               </p>
             </div>
           </div>
@@ -103,4 +106,4 @@ const RechercheMulticriteres = () => {
   );
 };
 
-export default RechercheMulticriteres;
+export default SiteEcommerce;

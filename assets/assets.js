@@ -103,19 +103,19 @@ export const workData = [
         title: 'Site e-commerce',
         description: 'Site Woocommerce',
         bgImage: '/work-2.png',
-        link:""
+        link:"/realisations/site-e-commerce"
     },
     {
         title: 'Site vitrine',
         description: 'Site Wordpress',
         bgImage: '/work-3.png',
-        link:""
+        link:"/realisations/site-vitrine"      
     },
     {
         title: 'Application santé mentale',
         description: 'App mobile',
         bgImage: '/work-4.png',
-        link:""
+        link:"/realisations/app-mobile"
     },
 ]
 

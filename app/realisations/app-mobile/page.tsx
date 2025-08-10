@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const RechercheMulticriteres = () => {
+const Appmobile = () => {
   return (
     <>
       <div className="m-auto">
@@ -19,37 +19,38 @@ const RechercheMulticriteres = () => {
           <div className="flex flex-col gap-4 mb-5 lg:flex-row">
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.calendar_icon} alt="" className="w-6 h-6" />
-              2024
+              2025
             </div>
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.pc_icon} alt="" className="w-6 h-6" />
-              Application web
+              Application mobile
             </div>
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.build_icon} alt="" className="w-6 h-6" />
-              Création d'une app web Wordpress/React
+              Création d'une app mobile
             </div>
           </div>
           <h1 className="text-3xl lg:text-5xl text-center font-bold">
-            Recherche multicritères, application custom au sein de Wordpress
+            React Native, application mobile de santé mentale
           </h1>
           <p className="text-lg my-5 text-center">
-            Un système de recherche entre pour trouver facilement les différents
-            logements proposés par l'entreprise selon de nombreux critères
+            Une application mobile pour aider les utilisateur à améliorer leure
+            santé mentale et gérer leur stress en proposant des outils simples
+            et adaptés à leur situation
           </p>
-          <a
+          {/* <a
             target="_blank"
             href="https://jeune-bienetre.fr/nos-centres-de-jeune/"
             className="bg-[#EC1552] px-5 py-3 rounded-2xl text-white font-bold"
           >
             Découvrir l'application
-          </a>
+          </a> */}
         </div>
 
         <div className="flex flex-col lg:flex-row items-start justify-between w-[70%] m-auto mt-20 pb-20 gap-10 xl:gap-0">
           <div className="flex flex-1/2">
             <Image
-              src={"/work-1.png"}
+              src={"/work-4.png"}
               alt=""
               width="500"
               height="500"
@@ -58,27 +59,28 @@ const RechercheMulticriteres = () => {
           </div>
           <div className="flex flex-col flex-1/2 gap-5">
             <p className="text-lg">
-              Jeûne & Bien-être est une entreprise française proposant de
-              nombreux lieux/centres avec des programmes d'accompagnement au{" "}
-              <b>jeûne</b> et à la <b>détox</b>.
+              Il s'agit d'un projet personnel en développement répondant à un
+              besoin grandissant de la population: mieux <b>gérer son stress</b>{" "}
+              et
+              <b>améliorer sa santé mentale</b>.
             </p>
             <p className="text-lg">
-              Avec de nombreux clients et années d'expérience le réseau s'est
-              aggrandit accueillant ainsi plusieurs dizaines de centres à
-              travers la France. La recherche du lieu idéal pour le client était
-              donc devenu <b>un enjeux majeur pour l'entreprise</b>.
+              L'application a pour but de proposer des outils concrets, rapides
+              et adaptés à chaque utilisateur en fonction de leurs besoins
+              actuels.
             </p>
             <h2 className="text-lg font-bold">Les objectifs :</h2>
             <ul className="flex flex-col gap-3">
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Faciliter la recherche pour le client
+                Créer le design de l'app
               </li>
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Améliorer l'UX et l'UI
+                Créer tous les outils de l'application
               </li>
               <li className="before:content-['✔'] before:text-[#ec1552] before:mr-2 text-xl">
-                Créer un système performant, rapide avec de nombreuses
-                contraintes
+                Définir et mettre en place l'architecture de l'application (BDD,
+                authentification, back-end,front-end, rôles et permissions,
+                stockage... )
               </li>
             </ul>
           </div>
@@ -92,8 +94,7 @@ const RechercheMulticriteres = () => {
             </div>
             <div className="flex gap-5 justify-center items-center pt-10">
               <p className="text-lg">
-                CPT, Custom queries, utilisation de l'API et de custom endpoint,
-                javascript, ACF, API Google Map
+                React Native, appwrite, figma, canva, notion
               </p>
             </div>
           </div>
@@ -103,4 +104,4 @@ const RechercheMulticriteres = () => {
   );
 };
 
-export default RechercheMulticriteres;
+export default Appmobile;
