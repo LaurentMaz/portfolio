@@ -96,24 +96,28 @@ export const workData = [
     {
         title: 'Recherche multicritères',
         description: 'Application Wordpress',
+        descFull:" Un système de recherche entre pour trouver facilement les différents logements proposés par l'entreprise selon de nombreux critères",
         bgImage: '/work-1.png',
         link: "/realisations/recherche-multicriteres"
     },
     {
         title: 'Site e-commerce',
         description: 'Site Woocommerce',
+        descFull: " Un site de vente en ligne complet pour vendre les compléments alimentaires vendus par l'entreprise", 
         bgImage: '/work-2.png',
         link:"/realisations/site-e-commerce"
     },
     {
         title: 'Site vitrine',
         description: 'Site Wordpress',
+        descFull: " Accompagnement et création d'un site vitrine complet système de recherche des véhicules en ventes.", 
         bgImage: '/work-3.png',
         link:"/realisations/site-vitrine"      
     },
     {
         title: 'Application santé mentale',
         description: 'App mobile',
+        descFull: "Une application mobile pour aider les utilisateur à améliorer leure santé mentale et gérer leur stress en proposant des outils simples et adaptés à leur situation", 
         bgImage: '/work-4.png',
         link:"/realisations/app-mobile"
     },

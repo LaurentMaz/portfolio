@@ -6,6 +6,7 @@ import { a } from "motion/react-client";
 import Link from "next/link";
 
 const Work = ({ isDarkMode }: ThemeProps) => {
+  const workDataSliced = workData.slice(0, 4);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -35,7 +36,7 @@ const Work = ({ isDarkMode }: ThemeProps) => {
         développement Wordpress fullstack et front-end React.
       </p>
       <div className="grid grid-cols-[grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] my-10 gap-5 dark:text-black">
-        {workData.map(({ title, description, bgImage, link }, index) => (
+        {workDataSliced.map(({ title, description, bgImage, link }, index) => (
           <Link key={index} href={link}>
             <motion.div
               whileHover={{ scale: 1.05 }}

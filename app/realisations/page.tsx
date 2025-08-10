@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { assets } from "@/assets/assets";
+import { assets, workData } from "@/assets/assets";
 
 const page = () => {
   return (
@@ -15,24 +15,17 @@ const page = () => {
       </Link>
       <div className="flex items-center justify-center flex-col gap-10">
         <h1 className="text-center text-4xl"> Mes réalisations</h1>
-        <div className="flex flex-col gap-5">
-          <div>
-            <h2 className="text-xl font-bold">
-              Système de recherche multicritères
-            </h2>
-            <p>
-              Un système de recherche entre pour trouver facilement les
-              différents logements proposés par l'entreprise selon de nombreux
-              critères
-            </p>
-          </div>
-          <div>
-            <h2 className="text-xl font-bold">Site e-commerce</h2>
-            <p>
-              Un site de vente en ligne complet pour vendre les compléments
-              alimentaires vendus par l'entreprise
-            </p>
-          </div>
+        <div className="flex flex-col lg:flex-row gap-5 w-[80%]">
+          {workData.map(({ title, descFull }, index) => (
+            <div className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+              <h3 className="text-lg my-4 to-gray-700 dark:text-white">
+                {title}
+              </h3>
+              <p className="text-sm to-gray-600 leading-5 dark:text-white/80">
+                {descFull}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
