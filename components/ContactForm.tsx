@@ -7,7 +7,7 @@ const ContactForm = () => {
   const [result, setResult] = useState<string>();
   const [loading, setLoading] = useState(false);
 
-  // @ts-ignore
+  //@ts-expect-error
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
