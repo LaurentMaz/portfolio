@@ -15,13 +15,13 @@ const page = () => {
       </Link>
       <div className="flex items-center justify-center flex-col gap-10">
         <h1 className="text-center text-4xl"> Mes réalisations</h1>
-        <div className="flex flex-col lg:flex-row gap-5 w-[80%]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-[80%]">
           {workData.map(({ title, descFull }, index) => (
             <div
               className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white"
               key={index}
             >
-              <h3 className="text-lg my-4 to-gray-700 dark:text-white">
+              <h3 className="text-lg font-bold my-4 to-gray-700 dark:text-white">
                 {title}
               </h3>
               <p className="text-sm to-gray-600 leading-5 dark:text-white/80">
