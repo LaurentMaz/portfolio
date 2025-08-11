@@ -3,8 +3,10 @@ import React from "react";
 import { assets, infoList, toolsData } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
 import { motion } from "motion/react";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const About = ({ isDarkMode }: ThemeProps) => {
+const About = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <motion.div
       initial={{ opacity: 0 }}

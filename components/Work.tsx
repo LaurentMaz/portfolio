@@ -4,8 +4,10 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { a } from "motion/react-client";
 import Link from "next/link";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Work = ({ isDarkMode }: ThemeProps) => {
+const Work = () => {
+  const { isDarkMode } = useDarkMode();
   const workDataSliced = workData.slice(0, 4);
   return (
     <motion.div

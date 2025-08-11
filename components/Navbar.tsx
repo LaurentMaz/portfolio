@@ -2,10 +2,12 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { useEffect, useRef, useState } from "react";
 import { ThemeProps } from "@/types/ThemeTypes";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Navbar = ({ isDarkMode, setIsDarkMode }: ThemeProps) => {
+const Navbar = () => {
   const sideMenuRef = useRef<HTMLUListElement>(null);
   const [isScroll, setIsScroll] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const openMenu = () => {
     if (sideMenuRef.current) {
@@ -86,7 +88,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }: ThemeProps) => {
           </li>
         </ul>
         <div className="flex items-center gap-4">
-          <button onClick={() => setIsDarkMode!((prev) => !prev)}>
+          <button onClick={() => toggleDarkMode()}>
             <Image
               src={isDarkMode ? assets.sun_icon : assets.moon_icon}
               alt="icone lune de theme"

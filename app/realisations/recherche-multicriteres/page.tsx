@@ -1,13 +1,16 @@
-import { assets } from "@/assets/assets";
+"use client";
 
+import { assets } from "@/assets/assets";
+import { useDarkMode } from "@/context/DarkModeContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const RechercheMulticriteres = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <>
-      <div className="m-auto">
+      <div className={`m-auto ${isDarkMode ? "bg-[#11001F]" : ""}`}>
         <Link href="/#work">
           <div className="flex justify-end items-center py-6 pr-24 w-full sticky top-0 right-0 bg-white/50 backdrop-blur-lg dark:bg-darkTheme dark:shadow-white/20">
             <div className="bg-black p-3 rounded-full hover:bg-gray-700">
@@ -15,7 +18,11 @@ const RechercheMulticriteres = () => {
             </div>
           </div>
         </Link>
-        <div className="rounded-4xl p-16 flex flex-col justify-center items-center bg-[#F7F2E8] w-[70%] m-auto">
+        <div
+          className={`rounded-4xl p-16 flex flex-col justify-center items-center ${
+            isDarkMode ? "bg-[#19002c]" : "bg-[#F7F2E8]"
+          } w-[70%] m-auto`}
+        >
           <div className="flex flex-col gap-4 mb-5 lg:flex-row">
             <div className="flex gap-1 items-center justify-center">
               <Image src={assets.calendar_icon} alt="" className="w-6 h-6" />
@@ -83,7 +90,7 @@ const RechercheMulticriteres = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-[#F4F4F4]">
+        <div className={`${isDarkMode ? "bg-[#19002c]" : "bg-[#F4F4F4]"}`}>
           <div className="w-[70%] m-auto py-20 items-center justify-center">
             <div>
               <h2 className="text-center text-3xl font-bold">

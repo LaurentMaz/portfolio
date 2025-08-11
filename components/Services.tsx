@@ -2,8 +2,10 @@ import { assets, serviceData } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Services = ({ isDarkMode }: ThemeProps) => {
+const Services = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <motion.div
       initial={{ opacity: 0 }}

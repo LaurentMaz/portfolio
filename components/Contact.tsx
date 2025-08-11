@@ -2,8 +2,10 @@ import Image from "next/image";
 import ContactForm from "./ContactForm";
 import { ThemeProps } from "@/types/ThemeTypes";
 import { motion } from "motion/react";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Contact = ({ isDarkMode }: ThemeProps) => {
+const Contact = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <motion.div
       initial={{ opacity: 0 }}

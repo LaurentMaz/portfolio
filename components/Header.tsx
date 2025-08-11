@@ -2,8 +2,10 @@ import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
 import { motion } from "motion/react";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Header = ({ isDarkMode }: ThemeProps) => {
+const Header = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <motion.div

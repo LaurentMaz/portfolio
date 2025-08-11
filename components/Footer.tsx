@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { assets } from "@/assets/assets";
 import { ThemeProps } from "@/types/ThemeTypes";
+import { useDarkMode } from "@/context/DarkModeContext";
 
-const Footer = ({ isDarkMode }: ThemeProps) => {
+const Footer = () => {
+  const { isDarkMode } = useDarkMode();
   return (
     <div className="mt-20">
       <div className="text-center">
