@@ -121,6 +121,36 @@ export const workData = [
         bgImage: '/work-4.png',
         link:"/realisations/app-mobile"
     },
+    {
+        title: 'Site avec réservation coaching',
+        description: 'Site Wordpress',
+        descFull: "Jeûne & Coaching est un site web proposant la réservation de session de coaching avec des naturopathes.", 
+        bgImage: '',
+        link:""
+    },
+    {
+        title: 'Application de covoiturage',
+        description: 'Site Wordpress',
+        descFull: "Une application web permettant aux clients de proposer ou s'inscrire à un covoiturage pour se rendre sur les lieux du séjour.", 
+        bgImage: '',
+        link:""
+    },
+   
+    {
+        title: 'Site magazine',
+        description: 'Site Wordpress',
+        descFull: "Un site web de contenus en ligne avec de nombreux articles sur les thématiques du jeûne, du bien-être et de la détox.", 
+        bgImage: '',
+        link:""
+    },
+    {
+        title: 'Site intranet',
+        description: 'Site Wordpress',
+        descFull: "Un intranet permettant la transimission et l'échange d'information entre tous les acteurs du réseau de l'entreprise.", 
+        bgImage: '',
+        link:""
+    },
+   
 ]
 
 export const serviceData = [
