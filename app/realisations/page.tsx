@@ -4,10 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { assets, workData } from "@/assets/assets";
-import { useDarkMode } from "@/context/DarkModeContext";
 
-const page = () => {
-  const { isDarkMode } = useDarkMode();
+const Page = () => {
   return (
     <div className="m-auto">
       <Link href="/#work">
@@ -39,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
